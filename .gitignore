@@ -1,0 +1,9 @@
+# Ignore installable dependencies.
+vendor/*
+composer.lock
+composer.phar
+
+# Ignore vim rubbish.
+*.swp
+*.un~
+
