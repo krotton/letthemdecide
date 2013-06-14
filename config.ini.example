@@ -1,0 +1,8 @@
+; Let them decide configuration file
+
+[database]
+
+; Databse connection URI (in PDO's format).
+; For more info, see: http://www.php.net/manual/en/pdo.drivers.php
+dsn = 'sqlite:data.sqlite'
+
