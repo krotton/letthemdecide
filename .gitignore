@@ -6,3 +6,5 @@ composer.phar
 *.swp
 *.un~
 
+# Rewrite example is public, custom configuration is private.
+rewrite.conf

@@ -1,0 +1,6 @@
+# Rewrite rules for Lighttpd.
+# If you're using a different web server, just adapt them.
+
+url.rewrite-once = (
+    "^/test(\d{3})$" => "/index.php?test=$1"
+)
