@@ -9,3 +9,6 @@ composer.phar
 # Examples are public, custom configuration is private.
 rewrite.conf
 config.ini
+
+# SQLite3 database
+data.sqlite
