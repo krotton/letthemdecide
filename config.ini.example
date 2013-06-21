@@ -4,5 +4,20 @@
 
 ; Databse connection URI (in PDO's format).
 ; For more info, see: http://www.php.net/manual/en/pdo.drivers.php
-dsn = 'sqlite:data.sqlite'
+dsn = 'sqlite:../data.sqlite'
+
+[urls]
+
+; To properly handle rewrites or custom url layouts, LTD needs to know
+; the urls for actions. These can be configured here.
+; Absolute and unqualified (without protocol and domain) paths are expected.
+
+index = '/'
+sign = '/sign'
+markers = '/markers.json'
+
+[maps]
+
+; Google's API key to use maps.
+gmaps_key = '<change me!>'
 

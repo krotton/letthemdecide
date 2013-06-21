@@ -2,11 +2,31 @@
 <html>
     <head>
         <title>Let them decide!</title>
+
+        <script type="text/javascript"
+            src="http://code.jquery.com/jquery-1.10.1.min.js">
+        </script>
+
+        <script type="text/javascript"
+            src="https://maps.googleapis.com/maps/api/js?key={{ gmaps_key }}&sensor=false">
+        </script>
     </head>
 
     <body>
-        <p>
-            Hello, {{ name }}!
-        </p>
+        <section id="intro">
+            <h1>Let there be a referendum!</h1>
+
+            <p>
+                Some introductory text here. Let them know.
+            </p>
+        </section>
+
+        <section id="form">
+            {% include 'form.html' %}
+        </section>
+
+        <section id="map">
+            {% include 'map.html' %}
+        </section>
     </body>
 </html>
