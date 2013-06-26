@@ -3,20 +3,30 @@
     require_once 'urls.php';
     require_once 'errors.php';
 
-    const msg = 'Invalid request!';
+    foreach(['email', 'name', 'year_of_birth', 'city',
+        'postal_code', 'address', 'latitude', 'longitude'] as $k)
+    {
+        if (!array_key_exists($k, $_POST))
+        {
+            header('Status: 400');
+            die;
+        }
+        else if (!$_POST[$k])
+            set_form_error($k, 'Cannot be empty!');
+    }
 
     # Get the form data:
-    $email = $_POST['email'] or die(msg);
+    $email = $_POST['email'];
 
-    $name = $_POST['name'] or die(msg);
-    $year_of_birth = $_POST['year_of_birth'] or die(msg);
+    $name = $_POST['name'];
+    $year_of_birth = $_POST['year_of_birth'];
 
-    $city = $_POST['city'] or die(msg);
-    $postal = $_POST['postal_code'] or die(msg);
-    $address = $_POST['address'] or die(msg);
+    $city = $_POST['city'];
+    $postal = $_POST['postal_code'];
+    $address = $_POST['address'];
 
-    $lat = $_POST['latitude'] or die(msg);
-    $lng = $_POST['longitude'] or die(msg);
+    $lat = $_POST['latitude'];
+    $lng = $_POST['longitude'];
 
     # Validate:
     $errors = [];
@@ -24,7 +34,7 @@
     if (!preg_match('/\@.+\.\w{2,}/', $email))
         $errors['email'] = 'Invalid e-mail!';
 
-    if (int($year_of_birth) > int(date('Y')))
+    if (intval($year_of_birth) > intval(date('Y')))
         $errors['year_of_birth'] = 'Howdy, visitors from the future!';
 
     if (!preg_match('/^\d{2}\-\d{3}$/', $postal)) # Polish postal code format

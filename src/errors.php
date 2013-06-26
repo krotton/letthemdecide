@@ -3,7 +3,7 @@
     {
         $errors = [];
 
-        foreach ($_COOKIES as $k => $v)
+        foreach ($_COOKIE as $k => $v)
             if (!strncmp($k, 'err_', 4))
             {
                 $errors[] = $v;
