@@ -5,5 +5,7 @@
         
         if ($config === FALSE)
             die('Config file not found or unparseable!');
+
+        return $config;
     }
 ?>

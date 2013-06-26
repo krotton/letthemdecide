@@ -1,0 +1,50 @@
+<form action="{{ form_action }}" method="POST">
+    <dl>
+        <dt>
+            <label for="email">E-mail: </label>
+        </dt>
+        <dd>
+            <input type="text" name="email" id="email" />
+        </dd>
+
+        <dt>
+            <label for="name">Name: </label> 
+        </dt>
+        <dd>
+            <input type="text" name="name" id="name" />
+        </dd>
+
+        <dt>
+            <label for="year_of_birth">Year of birth: </label>
+        </dt>
+        <dd>
+            <input type="text" name="year_of_birth" id="year_of_birth" />
+        </dd>
+
+        <dt>
+            <label for="city">City: </label>
+        </dt>
+        <dd>
+            <input type="text" name="city" id="city" />
+        </dd>
+
+        <dt>
+            <label for="postal_code">Postal code: </label>
+        </dt>
+        <dd>
+            <input type="text" name="postal_code" id="postal_code" />
+        </dd>
+
+        <dt>
+            <label for="address">Address: </label>
+        </dt>
+        <dd>
+            <input type="text" name="address" id="address" />
+        </dd>
+    </dl>
+
+    <input type="hidden" name="latitude" />
+    <input type="hidden" name="longitude" />
+
+    <input type="submit" value="Sign!" />
+</form>

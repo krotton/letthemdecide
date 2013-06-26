@@ -2,5 +2,6 @@
 # If you're using a different web server, just adapt them.
 
 url.rewrite-once = (
-    "^/test(\d{3})$" => "/index.php?test=$1"
+    "^/sign" => "/sign.php",
+    "^/markers.json" => "/markers.php"
 )

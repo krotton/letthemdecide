@@ -3,7 +3,7 @@
     {
         try
         {
-            $db = new PDO($config['database']['dsn']);
+            return new PDO($config['database']['dsn']);
         }
         catch (PDOException $e)
         {
